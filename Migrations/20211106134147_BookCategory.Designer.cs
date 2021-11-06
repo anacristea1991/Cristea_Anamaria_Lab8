@@ -4,14 +4,16 @@ using Cristea_Anamaria_Lab8.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cristea_Anamaria_Lab8.Migrations
 {
     [DbContext(typeof(Cristea_Anamaria_Lab8Context))]
-    partial class Cristea_Anamaria_Lab8ContextModelSnapshot : ModelSnapshot
+    [Migration("20211106134147_BookCategory")]
+    partial class BookCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Cristea_Anamaria_Lab8.Data;
 using Cristea_Anamaria_Lab8.Models;
 
-namespace Cristea_Anamaria_Lab8.Pages.Books
+namespace Cristea_Anamaria_Lab8.Pages.Publishers
 {
     public class IndexModel : PageModel
     {
@@ -19,13 +19,11 @@ namespace Cristea_Anamaria_Lab8.Pages.Books
             _context = context;
         }
 
-        public IList<Book> Book { get;set; }
+        public IList<Publisher> Publisher { get;set; }
 
         public async Task OnGetAsync()
         {
-            Book = await _context.Book
-                .Include(b => b.Publisher)
-                .ToListAsync();
+            Publisher = await _context.Publisher.ToListAsync();
         }
     }
 }
